@@ -78,7 +78,6 @@ def list_products():
 #função que lista na página os produtos organizados em linhas e colunas
 def list_products_screen():
     products = list_products()
-    print(type(products))
     if products:
         #define o número de cards por linha
         cards_por_linha = 3
@@ -91,7 +90,6 @@ def list_products_screen():
                 st.write(f"**Descrição:** {product[2]}")
                 st.write(f"**Preço:** R$ {product[3]:.2f}")
                 if product[4]:
-                    print("a", product[4])
                     html_img = f'<img src="{product[4]}" width="200" height="200" alt="imagem de produto">'
                     st.markdown(html_img, unsafe_allow_html=True)
                 st.markdown("---")
@@ -119,4 +117,4 @@ if st.button("Listar produtos"):
         list_products_screen()
         st.success("Produtos listados com sucesso")
     except Exception as e:
-        print("Falha em exibir os produtos")
+        st.error("Falha em exibir os produtos")
