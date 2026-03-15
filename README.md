@@ -12,3 +12,8 @@ Bibliotecas requeridas:
 - azure-storage-blob (para interagir com o armazenamento de blobs da Azure)
 - pymssql (para interagir com o banco de dados)
 - dotenv (para que o programa principal possa ler o arquivo .env e carregar suas configurações).
+
+Interface gráfica final:
+
+![Alt text](interface_gráfica.png?raw=true "Interface Gráfica")
+
